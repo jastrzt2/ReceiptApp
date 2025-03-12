@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply bg-slate-800 text-white min-h-screen font-inter;
+  }
+}
+
+@layer utilities {
+  .leftsidebar {
+    @apply hidden md:flex px-6 py-5 flex-col justify-between min-w-[180px] max-w-[270px] bg-dark-2;
+    position: relative;
+    height: 100%;
+    flex-shrink: 0;
+  }
+
+  .main-content {
+    @apply flex-1 overflow-auto;
+  }
+
+  .pagination .page-button {
+    text-decoration: underline;
+    background-color: #007bbf;
+    margin: 0 5px;
+  }
+
+  .pagination .page-button.active {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+  }
+
+  .pagination .page-button:hover {
+    background-color: #e9ecef;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-receipt_link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .grid-receipt_content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .grid-receipt_content p {
+    margin: 0;
+  }
+
+}
