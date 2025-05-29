@@ -13,7 +13,7 @@ public class PresentationServiceInstaller : IServiceInstaller
         {
             options.AddPolicy("AllowAll", builder =>
             {
-                builder.WithOrigins("http://localhost:5173") // or other allowed origins
+                builder.WithOrigins("http://localhost:5173") 
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();
